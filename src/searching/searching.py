@@ -15,11 +15,11 @@ def binary_search(arr, target):
     while low <= high:
         middle = (low + high) /2
         if target < arr[int(middle)]:
-            high = middle -1
+            high = int(middle) -1
         elif target > arr[int(middle)]:
-            low = middle - 1
+            low = int(middle)+1
         else:
-            return middle
+            return int(middle)
 
 
 
