@@ -1,16 +1,19 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
 
-    for step in range(1, len(arr)):
-        current = arr[step]
-        smallest = step - 1
-
-
-        while smallest >= 0 and current < arr[smallest]:
-            arr[smallest + 1] = arr[smallest]
-            smallest = smallest - 1
-
-        arr[smallest + 1] = current
+    #loop through the array
+    for i in range(len(arr)):
+    # set current index
+        current = i
+    #loop through again to capmare each element
+        for j in range(i + 1, len(arr)):
+        # if the arr current index is high than the compare array
+            if arr[current] > arr[j]:
+            #set new current to the next index
+                current = j
+        # swap here if true
+        arr[i], arr[current] = arr[current], arr[i]
+        
 
     return arr
 
