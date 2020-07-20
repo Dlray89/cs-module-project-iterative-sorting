@@ -21,13 +21,26 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
-
+    """
+    an optimized version of bubble sort algorithm
+    """
+    #travesre through arr
     for i in range(len(arr)):
+        #compare each element to the first arr
         for j in range(len(arr) - i - 1):
 
+            #keep track of swapping
+            swapped = True
+            #sort in ascending order
             if arr[j] > arr[j + 1]:
-
+                # swap fi element is greater t the rear position
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                
+                swapped = False
+
+                # if there is no swap in the last swap then array is sorted
+                if swapped:
+                    break
 
 
     return arr
